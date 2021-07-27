@@ -50,13 +50,20 @@ img {
   grid-template-columns: 1fr;
 }
 
+.fourthSection-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
 .fourthSection-text_block_left {
   font-family: "Questrial", sans-serif;
   font-size: 1.8rem;
   margin: 0;
   padding: 3rem;
   color: white;
-  text-align: center;
 }
 
 .fourthSection-text_block_right {
@@ -181,6 +188,23 @@ img {
   .thirdSection-text_block_1 {
     align-self: center;
   }
+
+  .fourthSection {
+    background-image: url("line_chart_large.png");
+    width: 100%;
+    display: grid;
+    background-color: #000000;
+    grid-template-columns: 1fr 1fr;
+    height: 446px;
+  }
+
+  .fourthSection-text_block_left {
+    font-size: 3rem;
+  }
+
+  .fourthSection-right {
+    background-color: unset;
+  }
 }
 
 /* desktop styles */
@@ -210,5 +234,22 @@ img {
   .thirdSection-text_block_1 {
     align-self: center;
     font-size: 2rem;
+  }
+
+  .fourthSection {
+    background-image: url("line_chart_large.png");
+    width: 100%;
+    display: grid;
+    background-color: #000000;
+    grid-template-columns: 1fr 1fr;
+    height: 446px;
+  }
+
+  .fourthSection-right {
+    background-color: unset;
+  }
+
+  .fourthSection-text_block_left {
+    font-size: 3rem;
   }
 }
