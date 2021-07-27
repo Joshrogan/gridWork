@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+:root {
+  --primary-text: #ffffff;
+  --secondary-text: #a9a9a9;
+  --background-color: #000000;
+}
+
+body {
+  width: 65%;
+  margin: 0 auto;
+}
+
+p {
+  font-family: "Questrial", sans-serif;
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* base styling */
+.secondSection {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.text_block {
+  background-color: var(--background-color);
+}
+
+.text_block:nth-of-type(odd) {
+  color: var(--primary-text);
+}
+
+.text_block:nth-of-type(even) {
+  color: var(--secondary-text);
+}
+
+.item {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.item_1 {
+  background-color: silver;
+}
+
+.item_2 {
+  background-color: gray;
+  color: white;
+}
+
+/* small tablet styles and above */
+@media screen and (min-width: 620px) {
+  .firstSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .text_block_1 {
+    background-color: black;
+    color: white;
+  }
+
+  .text_block_2 {
+    background-color: black;
+    color: white !important;
+  }
+
+  .text_block_3 {
+    background-color: silver;
+    color: black !important;
+  }
+
+  .text_block_4 {
+    background-color: silver;
+    color: black !important;
+  }
+
+  .secondSection {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+  .firstSection {
+    display: grid;
+    grid-template-columns: repeat(16, [col] 1fr);
+    grid-template-rows: repeat(5, [row] auto);
+  }
+
+  .text_block_1 {
+    grid-column: col / span 5;
+    grid-row: row / span 2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  .text_block_2 {
+    grid-column: col 6 / span 5;
+    grid-row: row / span 2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: silver;
+    color: black !important;
+  }
+
+  .text_block_3 {
+    grid-column: col 11 / span 6;
+    grid-row: row / span 1;
+    background-color: black;
+    color: white !important;
+  }
+
+  .text_block_4 {
+    grid-column: col 11 / span 6;
+    grid-row: row 2 / span 1;
+    background-color: black;
+    color: white !important;
+  }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px) {
+  .firstSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .text_block {
+    background-color: var(--background-color);
+  }
+
+  .text_block:nth-of-type(odd) {
+    color: var(--primary-text) !important;
+  }
+
+  .text_block:nth-of-type(even) {
+    color: var(--secondary-text) !important;
+  }
+}
