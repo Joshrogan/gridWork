@@ -1,0 +1,101 @@
+/* MOBILE STYLING */
+.one-col-block {
+  background-color: var(--background-color);
+  margin: 0;
+  padding: var(--globalPadding);
+}
+
+.one-col-block:nth-of-type(odd) {
+  color: var(--primary-text);
+}
+
+.one-col-block:nth-of-type(even) {
+  color: var(--secondary-text);
+}
+
+/* TABLET STYLING */
+
+.two-col-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.two-col-block-1 {
+  background-color: black;
+  color: white;
+}
+
+.two-col-block-2 {
+  background-color: black;
+  color: white !important;
+}
+
+.two-col-block-3 {
+  background-color: silver;
+  color: black !important;
+}
+
+.two-col-block-4 {
+  background-color: silver;
+  color: black !important;
+}
+
+/* LAPTOP STYLING */
+
+.three-col-section {
+  display: grid;
+  grid-template-columns: repeat(16, [col] 1fr);
+  grid-template-rows: repeat(5, [row] auto);
+}
+
+.three-col-block-1 {
+  grid-column: col / span 5;
+  grid-row: row / span 2;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.three-col-block-2 {
+  grid-column: col 6 / span 5;
+  grid-row: row / span 2;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: silver;
+  color: black !important;
+}
+
+.three-col-block-3 {
+  grid-column: col 11 / span 6;
+  grid-row: row / span 1;
+  background-color: black;
+  color: white !important;
+}
+
+.three-col-block-4 {
+  grid-column: col 11 / span 6;
+  grid-row: row 2 / span 1;
+  background-color: black;
+  color: white !important;
+}
+
+/* DESKTOP STYLING */
+.four-col-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.four-col-block {
+  background-color: var(--background-color);
+}
+
+.four-col-block:nth-of-type(odd) {
+  color: var(--primary-text) !important;
+}
+
+.four-col-block:nth-of-type(even) {
+  color: var(--secondary-text) !important;
+}
