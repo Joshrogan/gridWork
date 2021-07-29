@@ -1,10 +1,10 @@
-@import url("./CenturyGothic.woff");
-
 :root {
   --primary-text: #ffffff;
   --secondary-text: #a9a9a9;
   --background-color: #000000;
   --CenturyGothicFont: "CenturyGothic";
+  --maxContainerWidth: 1260px;
+  --globalPadding: 2rem 2.5rem;
 }
 
 @font-face {
@@ -15,11 +15,19 @@
 }
 
 /* base styles */
+
+/* Taken from: https://www.machineadvertising.com/product-page*/
+.masterContainer {
+  max-width: 1260px;
+  margin: 0 auto !important;
+  padding: 0 30px;
+  float: none !important;
+  width: 100% !important;
+}
+
 p {
   font-family: var(--CenturyGothicFont);
   font-size: 1.8rem;
-  margin: 0;
-  padding: 1rem;
 }
 
 img {
@@ -28,10 +36,42 @@ img {
   height: 100%;
 }
 
-/* mobile styling */
+/* base & mobile styling */
+.firstSectionTextBlock {
+  background-color: var(--background-color);
+  margin: 0;
+  padding: var(--globalPadding);
+}
+
+.firstSectionTextBlock:nth-of-type(odd) {
+  color: var(--primary-text);
+}
+
+.firstSectionTextBlock:nth-of-type(even) {
+  color: var(--secondary-text);
+}
+
 .secondSection {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.secondSectionItem {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: var(--globalPadding);
+  font-size: 1.8rem;
+}
+
+.secondSectionItem_1 {
+  background-color: silver;
+}
+
+.secondSectionItem_2 {
+  background-color: gray;
+  color: white;
 }
 
 .thirdSection {
@@ -39,6 +79,10 @@ img {
   grid-template-columns: 1fr;
   background-color: darkorange;
   color: white;
+}
+
+.thirdSection-text_block_1 {
+  padding: var(--globalPadding);
 }
 
 .fourthSection {
@@ -54,56 +98,27 @@ img {
   display: grid;
   background-color: #0b0b0b;
   grid-template-columns: 1fr;
+  padding: var(--globalPadding);
 }
 
 .fourthSection-left {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   width: 100%;
 }
 
 .fourthSection-text_block_left {
   font-family: var(--CenturyGothicFont);
-  font-size: 1.8rem;
+  font-size: 3rem;
   margin: 0;
-  padding: 3rem;
+  padding: var(--globalPadding);
   color: white;
 }
 
 .fourthSection-text_block_right {
   font-family: var(--CenturyGothicFont);
   font-size: 1.6rem;
-  margin-block-end: 0;
-  padding-left: 1rem;
-  color: white;
-}
-
-.text_block {
-  background-color: var(--background-color);
-}
-
-.text_block:nth-of-type(odd) {
-  color: var(--primary-text);
-}
-
-.text_block:nth-of-type(even) {
-  color: var(--secondary-text);
-}
-
-.item {
-  display: flex;
-  align-content: center;
-  flex-direction: column;
-}
-
-.item_1 {
-  background-color: silver;
-}
-
-.item_2 {
-  background-color: gray;
   color: white;
 }
 
@@ -198,10 +213,6 @@ img {
     height: 446px;
   }
 
-  .fourthSection-text_block_left {
-    font-size: 3rem;
-  }
-
   .fourthSection-right {
     background-color: unset;
   }
@@ -214,15 +225,15 @@ img {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  .text_block {
+  .firstSectionTextBlock {
     background-color: var(--background-color);
   }
 
-  .text_block:nth-of-type(odd) {
+  .firstSectionTextBlock:nth-of-type(odd) {
     color: var(--primary-text) !important;
   }
 
-  .text_block:nth-of-type(even) {
+  .firstSectionTextBlock:nth-of-type(even) {
     color: var(--secondary-text) !important;
   }
 
@@ -249,7 +260,8 @@ img {
     background-color: unset;
   }
 
-  .fourthSection-text_block_left {
-    font-size: 3rem;
+  .fourthSection-text_block_right {
+    margin-block-end: 0;
+    margin-block-start: 0;
   }
 }
